@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create flight</title>
+</head>
+<body>
+<form action="#" th:action="@{/flight-create}" th:object="${flight}" method="post">
+    <label for="to_col">To</label>
+    <input type="text" th:field="*{to_col}" id="to_col" placeholder="To">
+
+    <label for="from_col">From</label>
+    <input type="text" th:field="*{from_col}" id="from_col" placeholder="From">
+
+    <label for="date_dep">Date departure</label>
+    <input type="text" th:field="*{date_dep}" id="date_dep" placeholder="Date departure">
+
+    <label for="date_arr">Date arrival</label>
+    <input type="text" th:field="*{date_arr}" id="date_arr" placeholder="Date arrival">
+
+    <label for="ticket_type">Ticket type</label>
+    <input type="text" th:field="*{ticket_type}" id="ticket_type" placeholder="Ticket type">
+
+    <label for="plane_id">Plane Id</label>
+    <input type="number" th:field="*{plane_id}" id="plane_id" placeholder="Plane Id">
+
+    <input type="submit" value="Create Flight">
+</form>
+<p><a href="/flights">Back to flight list</a></p>
+</body>
+</html>

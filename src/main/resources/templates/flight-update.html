@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create flight</title>
+</head>
+<body>
+<form action="#" th:action="@{/flight-update}" th:object="${flight}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+
+    <label for="to_col">To</label>
+    <input type="text" th:field="*{to_col}" id="to_col" placeholder="To">
+    <br/>
+
+    <label for="from_col">From</label>
+    <input type="text" th:field="*{from_col}" id="from_col" placeholder="From">
+    <br/>
+
+    <label for="date_dep">Date Departure</label>
+    <input type="text" th:field="*{date_dep}" id="date_dep" placeholder="Date Departure">
+    <br/>
+
+    <label for="date_arr">Date Arrival</label>
+    <input type="text" th:field="*{date_arr}" id="date_arr" placeholder="Date Arrival">
+    <br/>
+
+    <label for="ticket_type">Ticket type</label>
+    <input type="text" th:field="*{ticket_type}" id="ticket_type" placeholder="Ticket type">
+    <br/>
+
+    <label for="plane_id">Plane Id</label>
+    <input type="number" th:field="*{plane_id}" id="plane_id" placeholder="Plane Id">
+    <br/>
+
+    <input type="submit" value="Update Flight">
+</form>
+</body>
+</html>

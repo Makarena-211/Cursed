@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Passangers</title>
+</head>
+<body>
+<div th:switch="${passangers}">
+  <h2 th:case="null">No passangers found!</h2>
+  <div th:case="*">
+    <h2>Passangers</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Birthdate</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="passanger:${passangers}">
+        <td th:text="${passanger.id}"></td>
+        <td th:text="${passanger.name}"></td>
+        <td th:text="${passanger.sirname}"></td>
+        <td th:text="${passanger.birthdate}"></td>
+        <td><a th:href="@{passanger-update/{id}(id=${passanger.id})}">Edit</a></td>
+        <td><a th:href="@{passanger-delete/{id}(id=${passanger.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/passanger-create">Create passanger</a></p>
+  <p><a href="/flights">Check the flight list</a></p>
+  <p><a href="/planes">Check the plane list</a></p>
+  <p><a href="/main">Return to the main page</a></p>
+</div>
+</body>
+</html>

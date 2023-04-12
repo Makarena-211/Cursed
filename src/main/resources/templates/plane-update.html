@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create plane</title>
+</head>
+<body>
+<form action="#" th:action="@{/plane-update}" th:object="${plane}" method="post">
+  <label for="id">ID</label>
+  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+  <br/>
+
+  <label for="count_pass">First name</label>
+  <input type="number" th:field="*{count_pass}" id="count_pass" placeholder="Count pass">
+  <br/>
+
+  <label for="name">Name</label>
+  <input type="text" th:field="*{name}" id="name" placeholder="Name">
+  <br/>
+
+  <label for="type">Type</label>
+  <input type="text" th:field="*{type}" id="type" placeholder="Type">
+  <br/>
+
+  <input type="submit" value="Update Plane">
+</form>
+</body>
+</html>
