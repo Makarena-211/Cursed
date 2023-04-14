@@ -5,6 +5,7 @@
   <title>Create passanger</title>
 </head>
 <body>
+
 <form action="#" th:action="@{/passanger-create}" th:object="${passanger}" method="post">
   <label for="name">First name</label>
   <input type="text" th:field="*{name}" id="name" placeholder="First Name">
@@ -14,6 +15,7 @@
   <input type="text" th:field="*{birthdate}" id="birthdate" placeholder="Birthdate">
   <input type="submit" value="Create Passanger">
 </form>
+
 <p><a href="/passangers">Back to passanger list</a></p>
 </body>
 </html>

@@ -32,7 +32,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 26px;
-  left: 1600px;
+  left: 1155px;
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -56,7 +56,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 350px;
-  left: 1145px;
+  left: 1000px;
   font-family: Roboto;
   font-weight: 100;
   font-size: 18px;
@@ -75,10 +75,10 @@ body {
   left: 1102px;
   overflow: hidden;
 }
-.v12_60 {
+.v12_60{
   width: 900px;
   height: 900px;
-  background: url("v12_60.png");
+  background: url("../photos/v12_60.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -86,17 +86,16 @@ body {
   position: relative;
   top: 0px;
   left: 0px;
-  overflow: hidden;
-}
+  overflow: hidden;}
 .v3_48 {
   width: 100%;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 150px;
-  left: 410px;
+  left: 420px;
   font-family: Roboto, monospace ;
   font-weight: 800;
-  font-size: 120px;
+  font-size: 90px;
   opacity: 1;
   text-align: left;
 }
@@ -107,7 +106,7 @@ body {
   opacity: 1;
   position: absolute;
   top: 681px;
-  left: 1005px;
+  left: 900px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -121,7 +120,7 @@ body {
   opacity: 1;
   position: absolute;
   top: 681px;
-  left: 1600px;
+  left: 1105px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -133,7 +132,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 693px;
-  left: 1610px;
+  left: 1115px;
   font-family: Roboto;
   font-weight: 300;
   font-size: 16px;
@@ -147,7 +146,7 @@ body {
   opacity: 1;
   position: absolute;
   top: 681px;
-  left: 1300px;
+  left: 1335px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -159,7 +158,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 693px;
-  left: 1310px;
+  left: 1350px;
   font-family: Roboto;
   font-weight: 300;
   font-size: 16px;
@@ -171,7 +170,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 693px;
-  left: 1015px;
+  left: 910px;
   font-family: Roboto;
   font-weight: 300;
   font-size: 16px;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8"/>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link type="text/css" href="/static/main.css" rel="stylesheet">
-    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+    <link href="../static/styles/main.css"  th:href="@{/styles/main.css}" rel="stylesheet" />
     <title>Main</title>
 </head>
 <body>
@@ -13,7 +13,9 @@
     <span class="v3_51">О нас</span>
     <span class="v3_52">Курсовая работа на тему: Информационно справочная система аэропорта. Подготовил студент группы ПИ21-1 Фоменков Макар</span>
     <div class="v3_53"></div>
-    <div class="v12_60"></div>
+    <div class="v12_60">
+        <img href="../static/styles/main.css" th:href="@{/photos/v12_60.png}">
+    </div>
     <span class="v3_48">ПУТЕШЕСТВИЯ ЗДЕСЬ</span>
     <div class="v30_2"></div>
     <div class="v30_4"></div>
@@ -21,7 +23,6 @@
     <div class="v30_5"></div>
     <span class="v30_7"><a href="/flights">Flights</a></span>
     <span class="v30_6"><a href="/passangers">Passengers</a></span>
-
 </div>
 </body>
 </html>
