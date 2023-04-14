@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<meta charset="UTF-8">
-<title>Create passanger</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Create passanger</title>
+  <link href="../static/styles/update.css"  th:href="@{/styles/update.css}" rel="stylesheet" />
 </head>
 <body>
 <form action="#" th:action="@{/passanger-update}" th:object="${passanger}" method="post">
