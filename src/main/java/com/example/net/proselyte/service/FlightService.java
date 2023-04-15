@@ -3,6 +3,7 @@ package com.example.net.proselyte.service;
 import com.example.net.proselyte.model.Flight;
 import com.example.net.proselyte.repository.FlightRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,7 +27,8 @@ public class FlightService {
     }
     public void deleteById(Long id){
         flightRepo.deleteById(id);
-
-
+    }
+    public List<Flight> sortById(){
+        return flightRepo.findAll(Sort.by("id"));
     }
 }

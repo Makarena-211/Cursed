@@ -33,11 +33,53 @@ td:first-child {
     width: 50px;
 }
 
+
+
 a {
+    text-align: center;
     text-decoration: none;
-    color: #007bff;
+    color: #6495ED;
+    top: 200px;
+    left: 900px;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+
+header {
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     height: 100px;
+     background-color: #007bff;
+ }
+
+h1{
+    color: #fff;
+    margin: 0;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover{
+    opacity: 0.8;
 }

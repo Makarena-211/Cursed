@@ -40,6 +40,10 @@ public class FlightController {
         flightService.deleteById(id);
         return "redirect:/flights";
     }
+    @GetMapping("/flight-sorted")
+    public List<Flight> sortById(){
+        return flightService.sortById();
+    }
     @GetMapping("/flight-update/{id}")
     public String updateFlightForm(@PathVariable("id") Long id, Model model){
         Flight flight = flightService.findById(id);

@@ -6,10 +6,14 @@
     <link href="../static/styles/list.css"  th:href="@{/styles/list.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+  <h1>Flights</h1>
+</header>
+
 <div th:switch="${flights}">
   <h2 th:case="null">No flights found!</h2>
   <div th:case="*">
-    <h2>Flights</h2>
+
     <table>
       <thead>
       <tr>
@@ -28,7 +32,7 @@
         <td th:text="${flight.to_col}"></td>
         <td th:text="${flight.from_col}"></td>
         <td th:text="${flight.date_dep}"></td>
-        <td th:text="${flight.date_arr}"></td>
+        <td th:text="${flight.date_arr}"><td>
         <td th:text="${flight.ticket_type}"></td>
         <td th:text="${flight.plane_id}"></td>
         <td><a th:href="@{flight-update/{id}(id=${flight.id})}">Edit</a></td>
@@ -37,11 +41,14 @@
       </tbody>
     </table>
   </div>
-  <p><a href="/flight-create">Create flight</a></p>
-  <p><a href="/planes">Check the plane list</a></p>
-  <p><a href="/passangers">Check the passanger list</a></p>
-  <p><a href="/">Return to the main page</a></p>
-  <video autoplay loop muted width="2000" height="800" src="video.mp4"></video>
+  <div class="button-container">
+    <a href="/flight-create" class="button">Create flight</a>
+    <a href="/planes" class="button">Check the plane list</a>
+    <a href="/passangers" class="button">Check the passanger list</a>
+    <a href="/" class="button">Return to the main page</a>
+  </div>
+
+  <!--  <video autoplay loop muted width="2000" height="800" src="video.mp4"></video>  -->
 </div>
 </body>
 </html>

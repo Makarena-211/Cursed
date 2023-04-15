@@ -6,10 +6,13 @@
     <link href="../static/styles/list.css" th:href="@{/styles/list.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+    <h1>Planes</h1>
+</header>
 <div th:switch="${planes}">
     <h2 th:case="null">No planes found!</h2>
     <div th:case="*">
-        <h2>Planes</h2>
+
         <table>
             <thead>
             <tr>
@@ -31,10 +34,14 @@
             </tbody>
         </table>
     </div>
-    <p><a href="/plane-create">Create plane</a></p>
-    <p><a href="/flights">Check the flight list</a></p>
-    <p><a href="/passangers">Check the passanger list</a></p>
-    <p><a href="/">Return to the main page</a></p>
+    <div class="button-container">
+        <a href="/plane-create" class="button">Create plane</a>
+        <a href="/flights" class="button">Check the flight list</a>
+        <a href="/passangers" class="button">Check the passanger list</a>
+        <a href="/" class="button">Return to the main page</a>
+    </div>
+
 </div>
+
 </body>
 </html>
