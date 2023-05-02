@@ -1,5 +1,6 @@
 package com.example.net.proselyte.service;
 
+import com.example.net.proselyte.model.Flight;
 import com.example.net.proselyte.model.Passanger;
 import com.example.net.proselyte.repository.PassangerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,13 @@ public class PassangerService {
     }
     public void deleteById(Long id){
         passangerRepo.deleteById(id);
+    }
 
-
+    public List<Passanger> listAll(String keyword) {
+        if (keyword != null) {
+            return passangerRepo.search(keyword);
+        } else {
+            return passangerRepo.findAll();
+        }
     }
 }

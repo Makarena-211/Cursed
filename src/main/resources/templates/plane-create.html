@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Create plane</title>
-    <link href="../static/styles/create.css"  th:href="@{/styles/create.css}" rel="stylesheet" />
+    <link href="../static/styles/create.css" th:href="@{/styles/test-create.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+    <h1>Create Plane</h1>
+</header>
 <form action="#" th:action="@{/plane-create}" th:object="${plane}" method="post">
     <label for="id">Id</label>
     <input type="number" th:field="*{id}" id="id" placeholder="Id">
@@ -21,6 +24,11 @@
 
     <input type="submit" value="Create Plane">
 </form>
-<p><a href="/planes">Back to plane list</a></p>
+
+
+<div class="button-container">
+    <a href="/planes" class="button">Back to plane list</a>
+</div>
+
 </body>
 </html>

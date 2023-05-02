@@ -28,7 +28,19 @@ public class FlightService {
     public void deleteById(Long id){
         flightRepo.deleteById(id);
     }
-    public List<Flight> sortById(){
-        return flightRepo.findAll(Sort.by("id"));
+    public List<Flight> sortFlightsByIdAsc() {
+        List<Flight> flights = flightRepo.findAll(Sort.by(Sort.Direction.ASC, "id"));
+        return flights;
+    }
+    public List<Flight> sortFlightsByIdDesc() {
+        List<Flight> flights = flightRepo.findAll(Sort.by(Sort.Direction.DESC, "id"));
+        return flights;
+    }
+    public List<Flight> listAll(String keyword) {
+        if (keyword != null) {
+            return flightRepo.search(keyword);
+        } else {
+            return flightRepo.findAll();
+        }
     }
 }

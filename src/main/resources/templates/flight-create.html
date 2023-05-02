@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Create flight</title>
-    <link href="../static/styles/create.css"  th:href="@{/styles/create.css}" rel="stylesheet" />
+    <link href="../static/styles/create.css" th:href="@{/styles/test-create.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+    <h1>Create Flight</h1>
+</header>
+
 <form action="#" th:action="@{/flight-create}" th:object="${flight}" method="post">
     <label for="to_col">To</label>
     <input type="text" th:field="*{to_col}" id="to_col" placeholder="To">
@@ -27,6 +31,8 @@
 
     <input type="submit" value="Create Flight">
 </form>
-<p><a href="/flights">Back to flight list</a></p>
+<div class="button-container">
+    <a href="/flights" class="button">Back to flight list</a>
+</div>
 </body>
 </html>

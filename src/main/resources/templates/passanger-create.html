@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Create passanger</title>
-  <link href="../static/styles/create.css"  th:href="@{/styles/create.css}" rel="stylesheet" />
+  <link href="../static/styles/create.css" th:href="@{/styles/test-create.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+  <h1>Create Passanger</h1>
+</header>
 
 <form action="#" th:action="@{/passanger-create}" th:object="${passanger}" method="post">
   <label for="name">First name</label>
@@ -17,6 +20,10 @@
   <input type="submit" value="Create Passanger">
 </form>
 
-<p><a href="/passangers">Back to passanger list</a></p>
+
+<div class="button-container">
+  <a href="/passangers" class="button">Back to passanger list</a>
+</div>
+
 </body>
 </html>

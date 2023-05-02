@@ -1,9 +1,11 @@
 package com.example.net.proselyte.controller;
 
+import com.example.net.proselyte.model.Flight;
 import com.example.net.proselyte.model.Passanger;
 import com.example.net.proselyte.service.PassangerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +25,20 @@ public class PassengerController {
     public PassengerController(PassangerService passangerService){
         this.passangerService=passangerService;
     }
-
+/*
     @GetMapping("/passangers")
     public String findAll(Model model){
         List<Passanger> passangers = passangerService.findAll();
         model.addAttribute("passangers", passangers);
+        return "passanger-list";
+    }
+
+ */
+    @RequestMapping("/passangers")
+    public String findByKey(Model model, @Param("keyword") String keyword){
+        List<Passanger> passangers = passangerService.listAll(keyword);
+        model.addAttribute("passangers", passangers);
+        model.addAttribute("keyword", keyword);
         return "passanger-list";
     }
     @GetMapping("/passanger-create")

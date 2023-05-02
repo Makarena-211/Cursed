@@ -3,11 +3,13 @@ package com.example.net.proselyte.controller;
 import com.example.net.proselyte.model.Flight;
 import com.example.net.proselyte.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -20,12 +22,25 @@ public class FlightController {
         this.flightService=flightService;
     }
 
+    /*
     @GetMapping("/flights")
     public String findAll(Model model){
         List<Flight> flights = flightService.findAll();
         model.addAttribute("flights", flights);
         return "flight-list";
     }
+    */
+
+    @RequestMapping("/flights")
+    public String findByKey(Model model, @Param("keyword") String keyword){
+        List<Flight> flights = flightService.listAll(keyword);
+        model.addAttribute("flights", flights);
+        model.addAttribute("keyword", keyword);
+        return "flight-list";
+    }
+
+
+
     @GetMapping("/flight-create")
     public String createFlightForm(Flight flight){
         return "flight-create";
@@ -40,9 +55,18 @@ public class FlightController {
         flightService.deleteById(id);
         return "redirect:/flights";
     }
-    @GetMapping("/flight-sorted")
-    public List<Flight> sortById(){
-        return flightService.sortById();
+
+    @GetMapping("/flight-sort-by-id-asc")
+    public String sortFlightsByIdAsc(Model model) {
+        List<Flight> flights = flightService.sortFlightsByIdAsc();
+        model.addAttribute("flights", flights);
+        return "redirect:/flights";
+    }
+    @GetMapping("/flight-sort-by-id-desc")
+    public String sortFlightsByIdDesc(Model model) {
+        List<Flight> flights = flightService.sortFlightsByIdDesc();
+        model.addAttribute("flights", flights);
+        return "redirect:/flights";
     }
     @GetMapping("/flight-update/{id}")
     public String updateFlightForm(@PathVariable("id") Long id, Model model){

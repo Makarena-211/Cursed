@@ -1,53 +1,92 @@
-form {
-    max-width: 500px;
-    margin: 0 auto;
+/* Оформление заголовка */
+header {
+    background-color: #6c757d;
+    text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f8f8f8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Arial;
+    color: #3a3a3a;
+}
+body{
+    background-color: #6c757d;
+}
+
+/* Оформление формы */
+form {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial;
+    color: #3a3a3a;
+    margin-top: 20px;
 }
 
-input[type="number"],
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 20px;
     font-size: 16px;
+    font-weight: 400;
+    font-family: Arial;
+    line-height: 1.5;
+    color: #6c757d;
+    background-color: #ced4da;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #007bff;
-    color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial;
+    line-height: 1.5;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0069d9;
+    background-color: #0062cc;
 }
 
-/* стили для ссылки "Back to plane list" */
-a {
+/* Оформление кнопки */
+.button {
     display: inline-block;
-    margin-top: 20px;
-    color: #007bff;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial;
+    line-height: 1.5;
+    border-radius: 4px;
     text-decoration: none;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+.button:hover {
+    background-color: #c82333;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 40px;
 }

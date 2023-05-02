@@ -2,18 +2,28 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <link href="../static/styles/list.css" th:href="@{/styles/list.css}" rel="stylesheet" />
+  <link href="../static/styles/list.css" th:href="@{/styles/test.css}" rel="stylesheet" />
   <title>Passangers</title>
 </head>
-<body>
+<body class="background-image">
 <header>
   <h1>Passangers</h1>
 </header>
+<div class="row">
+  <div class="col-md-8 offset-md-4">
+    <h4>Поиск рейса по строчному критерию:</h4>
+    <form th:action="@{/passangers}" method="get">
+      <input type="text" name="keyword" id="keyword" size="70" th:value="${keyword}" required/>
+      <input type="submit" class="btn btn-success btn-sn" value="Поиск"/>
+      <input type="button" class="btn btn-warning btn-sn" value="Очистить" id="btnClear" onclick="clearSearch()"/>
+    </form>
+  </div>
+</div>
 
 <div th:switch="${passangers}">
   <h2 th:case="null">No passangers found!</h2>
   <div th:case="*">
-    <table>
+    <table id="1">
       <thead>
       <tr>
         <th>Id</th>
@@ -34,13 +44,28 @@
       </tbody>
     </table>
   </div>
-
   <div class="button-container">
     <a href="/passanger-create" class="button">Create passanger</a>
     <a href="/flights" class="button">Check the flight list</a>
     <a href="/planes" class="button">Check the plane list</a>
     <a href="/" class="button">Return to the main page</a>
   </div>
+
+  <p class="text-black">
+    <script type="text/javascript">
+      function getrows(){
+        let table = document.getElementById('1')
+        let tBody = table.querySelector('tbody')
+        const count = tBody.querySelectorAll('tr').length
+        document.write('Количество рейсов в таблице: ' + count)
+      }
+      getrows()
+
+      function clearSearch(){
+        window.location="[[@{/passangers}]]"
+      }
+    </script>
+  </p>
 
 </div>
 </body>

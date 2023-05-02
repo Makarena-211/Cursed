@@ -13,6 +13,7 @@ import lombok.*;
 @Entity
 @Table(name = "planes")
 public class Plane {
+
     @Id
     private Long id;
     @Column(name = "count_pass")
