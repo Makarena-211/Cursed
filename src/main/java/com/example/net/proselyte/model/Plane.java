@@ -3,7 +3,11 @@ package com.example.net.proselyte.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-
+/**
+ *  Класс Plane, отвечающий за подключение и инициализацию модели planes в MVC паттерне.
+ *  Используется для создания объекта модели и установки его свойств.
+ *  Обеспечивает доступ к методам модели для контроллера и представления.
+ */
 @Getter
 @Setter
 @Builder

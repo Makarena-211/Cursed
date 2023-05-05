@@ -11,11 +11,11 @@
 </header>
 <div class="row">
     <div class="col-md-8 offset-md-4">
-        <h4>Поиск рейса по строчному критерию:</h4>
+        <h4>Plane search by string criteria: </h4>
         <form th:action="@{/planes}" method="get">
             <input type="text" name="keyword" id="keyword" size="70" th:value="${keyword}" required/>
-            <input type="submit" class="btn btn-success btn-sn" value="Поиск"/>
-            <input type="button" class="btn btn-warning btn-sn" value="Очистить" id="btnClear" onclick="clearSearch()"/>
+            <input type="submit" class="btn btn-success btn-sn" value="Search"/>
+            <input type="button" class="btn btn-warning btn-sn" value="Clear" id="btnClear" onclick="clearSearch()"/>
         </form>
     </div>
 </div>
@@ -38,8 +38,8 @@
                 <td th:text="${plane.count_pass}"></td>
                 <td th:text="${plane.name}"></td>
                 <td th:text="${plane.type}"></td>
-                <td><a th:href="@{plane-update/{id}(id=${plane.id})}">Edit</a></td>
-                <td><a th:href="@{plane-delete/{id}(id=${plane.id})}">Delete</a></td>
+                <td><a th:href="@{plane-update/{id}(id=${plane.id})}" class="edit-link">Edit</a></td>
+                <td><a th:href="@{plane-delete/{id}(id=${plane.id})}" class="delete-link">Delete</a></td>
             </tr>
             </tbody>
         </table>
@@ -51,13 +51,13 @@
         <a href="/" class="button">Return to the main page</a>
     </div>
 
-    <p class="text-black">
+    <h4 class="text-black">
         <script type="text/javascript">
             function getrows(){
                 let table = document.getElementById('1')
                 let tBody = table.querySelector('tbody')
                 const count = tBody.querySelectorAll('tr').length
-                document.write('Количество рейсов в таблице: ' + count)
+                document.write('Planes count in table: ' + count)
             }
             getrows()
 
@@ -65,10 +65,7 @@
                 window.location="[[@{/planes}]]"
             }
         </script>
-    </p>
+    </h4>
 </div>
-
-
-
 </body>
 </html>

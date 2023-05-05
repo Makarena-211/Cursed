@@ -4,7 +4,7 @@ header {
     text-align: center;
     padding: 20px;
 }
-
+/*оформление шрифта текста*/
 h1 {
     margin: 0;
     font-size: 36px;
@@ -12,6 +12,7 @@ h1 {
     font-family: Arial;
     color: #3a3a3a;
 }
+/*назначение цвета фона*/
 body{
     background-color: #6c757d;
 }
@@ -32,7 +33,7 @@ label {
     color: #3a3a3a;
     margin-top: 20px;
 }
-
+/*Оформление блока для вписывания данных*/
 input[type="text"],
 input[type="number"] {
     display: block;
@@ -48,11 +49,11 @@ input[type="number"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+/*оформление кнопки submit*/
 input[type="submit"] {
-    background-color: #007bff;
-    border: none;
+    background-color: #3e8e41;
     color: #fff;
+    border: 1px solid #000000;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 600;
@@ -60,18 +61,20 @@ input[type="submit"] {
     line-height: 1.5;
     border-radius: 4px;
     cursor: pointer;
+
+}
+/*офромление кнопки submit при наведении курсора на ее*/
+input[type="submit"]:hover {
+    background-color: #28a760;
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #0062cc;
-}
-
-/* Оформление кнопки */
+/* Оформление кнопки back to (страница с бд)*/
 .button {
     display: inline-block;
-    background-color: #dc3545;
+    background-color: #6c757d;
     color: #fff;
+    border: 1px solid #000000;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 600;
@@ -79,11 +82,12 @@ input[type="submit"]:hover {
     line-height: 1.5;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-}
 
+}
+/*оформление кнопки back to (страница с бд) при наведении курсора на нее*/
 .button:hover {
     background-color: #c82333;
+    transition: background-color 0.3s ease;
 }
 
 .button-container {

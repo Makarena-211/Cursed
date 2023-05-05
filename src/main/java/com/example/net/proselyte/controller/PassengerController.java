@@ -14,7 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-
+/**
+ *  Класс PassengerController, отвечающий за управление потоком данных в MVC паттерне.
+ *  Получает запросы от View, обрабатывает их и возвращает результат.
+ *  Связывает Model и View, обеспечивая передачу данных между ними.
+ */
 @Controller
 
 public class PassengerController {
@@ -25,15 +29,7 @@ public class PassengerController {
     public PassengerController(PassangerService passangerService){
         this.passangerService=passangerService;
     }
-/*
-    @GetMapping("/passangers")
-    public String findAll(Model model){
-        List<Passanger> passangers = passangerService.findAll();
-        model.addAttribute("passangers", passangers);
-        return "passanger-list";
-    }
 
- */
     @RequestMapping("/passangers")
     public String findByKey(Model model, @Param("keyword") String keyword){
         List<Passanger> passangers = passangerService.listAll(keyword);

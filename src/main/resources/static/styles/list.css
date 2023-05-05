@@ -15,6 +15,7 @@ h1 {
     margin: 50px 0;
 }
 
+
 /* установка стилей для таблицы */
 table {
     border-collapse: collapse;
@@ -30,28 +31,39 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #6c757d;
+
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #8a929a;
 }
 
 /* установка стилей для кнопок */
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
 .button {
+    text-decoration: none;
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #6c757d;
+    color: #000000;
+    border: 1px solid #000000;
     text-align: center;
     padding: 14px 24px;
     margin: 10px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+
 }
 
 .button:hover {
     background-color: #3e8e41;
+    text-decoration: none;
+    transition: 0.7s;
+    color: white;
 }
 
 /* установка стилей для формы */
@@ -69,15 +81,23 @@ input[type="text"], input[type="submit"], input[type="button"] {
     margin: 10px;
 }
 
-input[type="submit"], input[type="button"] {
-    background-color: #4CAF50;
-    color: white;
-}
+/*установка стилей для кнопок "поиск" и "очистить"*/
 
-input[type="submit"]:hover, input[type="button"]:hover {
-    background-color: #3e8e41;
+.btn-success {
+    background-color: #28a745;
+    color: #ffffff;
 }
+.btn-success:hover{
+    background-color: #28a760;
+ }
 
+.btn-warning {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.btn-warning:hover{
+    background-color: #dc3560;
+}
 /* установка стилей для блока с сообщением */
 .message {
     text-align: center;
@@ -86,16 +106,22 @@ input[type="submit"]:hover, input[type="button"]:hover {
     margin: 50px 0;
 }
 
-/* установка стилей для ссылок */
-a {
-    color: #4CAF50;
+/* установка стилей для ссылок*/
+
+.edit-link {
+    color: #28a745;
+    text-decoration: none;
+}
+.edit-link:hover {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+.delete-link {
+    color: red;
+    text-decoration: none;
 }
-.btn-warning {
-    background-color: red;
-    color: white;
+.delete-link:hover {
+    text-decoration: none;
 }
+
+

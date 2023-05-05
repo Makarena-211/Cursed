@@ -1,12 +1,14 @@
 package com.example.net.proselyte.model;
 
 import jakarta.persistence.*;
-
 import lombok.*;
-
-
 import java.util.Date;
 
+/**
+ *  Класс Passanger, отвечающий за подключение и инициализацию модели passangers в MVC паттерне.
+ *  Используется для создания объекта модели и установки его свойств.
+ *  Обеспечивает доступ к методам модели для контроллера и представления.
+ */
 @Getter
 @Setter
 @Builder

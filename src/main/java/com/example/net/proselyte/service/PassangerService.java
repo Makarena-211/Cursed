@@ -7,6 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+/**
+ *  Класс, отвечающий за обработку данных о пассажирах в MVC паттерне.
+ *  Получает данные о рейсах от репозитория (PassangerRepo), обрабатывает их и возвращает результат.
+ *  Связывает контроллер (PassengerController) и модель (Passanger) через репозиторий (PassengerRepo).
+ */
 @Service
 public class PassangerService {
     @Autowired
@@ -17,9 +23,6 @@ public class PassangerService {
     }
     public Passanger findById(Long id){
         return passangerRepo.findById(id).get();
-    }
-    public List<Passanger> findAll(){
-        return passangerRepo.findAll();
     }
     public Passanger savePassanger(Passanger passanger){
         return passangerRepo.save(passanger);

@@ -2,8 +2,13 @@ package com.example.net.proselyte.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.Date;
+
+/**
+ *  Класс Flight, отвечающий за подключение и инициализацию модели flights в MVC паттерне.
+ *  Используется для создания объекта модели и установки его свойств.
+ *  Обеспечивает доступ к методам модели для контроллера и представления.
+ */
 
 @Getter
 @Setter
@@ -12,6 +17,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "flights")
+
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +34,4 @@ public class Flight {
     private String ticket_type;
     @Column(name = "plane_id")
     private int plane_id;
-
-
-
 }

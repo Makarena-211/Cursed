@@ -9,6 +9,11 @@ import org.springframework.security.core.parameters.P;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ *  Класс, представляющий собой репозиторий для хранения данных о пассажирах в MVC паттерне.
+ *  Используется для получения, добавления, обновления и удаления данных о пассажирах.
+ *  Реализует паттерн репозитория для удобства работы с данными.
+ */
 
 public interface PassangerRepo extends JpaRepository<Passanger, Long> {
     Optional<Passanger> findById(Long id);

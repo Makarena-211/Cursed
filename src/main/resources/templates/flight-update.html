@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Create flight</title>
-    <link href="../static/styles/update.css" th:href="@{/styles/test-update.css}" rel="stylesheet" />
+    <link href="../static/styles/update.css" th:href="@{/styles/update.css}" rel="stylesheet" />
 </head>
 <body>
+<header>
+    <h1>Update Flight</h1>
+</header>
 <form action="#" th:action="@{/flight-update}" th:object="${flight}" method="post">
     <label for="id">ID</label>
     <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">

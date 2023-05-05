@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ *  Класс, отвечающий за обработку данных о самолетах в MVC паттерне.
+ *  Получает данные о рейсах от репозитория (PlaneRepo), обрабатывает их и возвращает результат.
+ *  Связывает контроллер (PlaneController) и модель (Plane) через репозиторий (PlaneRepo).
+ */
+
 @Service
 public class PlaneService {
     @Autowired
@@ -18,9 +24,6 @@ public class PlaneService {
     }
     public Plane findById(Long id){
         return planeRepo.findById(id).get();
-    }
-    public List<Plane> findAll(){
-        return planeRepo.findAll();
     }
     public Plane savePlane(Plane plane){
         return planeRepo.save(plane);

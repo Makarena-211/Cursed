@@ -11,11 +11,11 @@
 </header>
 <div class="row">
   <div class="col-md-8 offset-md-4">
-    <h4>Поиск рейса по строчному критерию:</h4>
+    <h4>Flight search by string criteria: </h4>
     <form th:action="@{/flights}" method="get">
       <input type="text" name="keyword" id="keyword" size="70" th:value="${keyword}" required/>
-      <input type="submit" class="btn btn-success btn-sn" value="Поиск"/>
-      <input type="button" class="btn-warning" value="Очистить" id="btnClear" onclick="clearSearch()"/>
+      <input type="submit" class="btn btn-success btn-sn" value="Search"/>
+      <input type="button" class="btn-warning" value="Clear" id="btnClear" onclick="clearSearch()"/>
     </form>
   </div>
 </div>
@@ -41,11 +41,11 @@
         <td th:text="${flight.to_col}"></td>
         <td th:text="${flight.from_col}"></td>
         <td th:text="${flight.date_dep}"></td>
-        <td th:text="${flight.date_arr}"><td>
+        <td th:text="${flight.date_arr}"></td>
         <td th:text="${flight.ticket_type}"></td>
         <td th:text="${flight.plane_id}"></td>
-        <td><a th:href="@{flight-update/{id}(id=${flight.id})}">Edit</a></td>
-        <td><a th:href="@{flight-delete/{id}(id=${flight.id})}">Delete</a></td>
+        <td><a th:href="@{flight-update/{id}(id=${flight.id})}" class="edit-link">Edit</a></td>
+        <td><a th:href="@{flight-delete/{id}(id=${flight.id})}" class="delete-link">Delete</a></td>
       </tr>
       </tbody>
     </table>
@@ -56,13 +56,13 @@
     <a href="/passangers" class="button">Check the passanger list</a>
     <a href="/" class="button">Return to the main page</a>
   </div>
-  <p class="text-black">
+  <h4 class="text-black">
     <script type="text/javascript">
       function getrows(){
         let table = document.getElementById('1')
         let tBody = table.querySelector('tbody')
         const count = tBody.querySelectorAll('tr').length
-        document.write('Количество рейсов в таблице: ' + count)
+        document.write('Flights count in table: ' + count)
       }
       getrows()
 
@@ -70,8 +70,7 @@
         window.location="[[@{/flights}]]"
       }
     </script>
-  </p>
-
+  </h4>
 </div>
 </body>
 </html>

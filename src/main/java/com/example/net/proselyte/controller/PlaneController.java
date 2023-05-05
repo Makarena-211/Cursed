@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+/**
+ *  Класс PlaneController, отвечающий за управление потоком данных в MVC паттерне.
+ *  Получает запросы от View, обрабатывает их и возвращает результат.
+ *  Связывает Model и View, обеспечивая передачу данных между ними.
+ */
 @Controller
 public class PlaneController {
     @Autowired
@@ -19,15 +24,7 @@ public class PlaneController {
     public PlaneController(PlaneService planeService){
         this.planeService=planeService;
     }
-/*
-    @GetMapping("/planes")
-    public String findAll(Model model){
-        List<Plane> planes = planeService.findAll();
-        model.addAttribute("planes", planes);
-        return "plane-list";
-    }
 
- */
     @RequestMapping("/planes")
     public String findByKey(Model model, @Param("keyword") String keyword){
         List<Plane> planes = planeService.listAll(keyword);
